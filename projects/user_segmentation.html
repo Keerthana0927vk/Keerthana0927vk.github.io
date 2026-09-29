@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>App User Behaviour Segmentation | Keerthana</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                Keerthana
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <main class="project-page">
+
+        <!-- HERO -->
+        <section class="project-hero">
+
+            <p class="project-label">
+                MACHINE LEARNING • UNSUPERVISED LEARNING
+            </p>
+
+            <h1>
+                App User Behaviour<br>
+                Segmentation
+            </h1>
+
+            <p class="project-intro">
+                A user segmentation project that applies K-Means
+                clustering to identify distinct app user behaviour
+                patterns based on engagement and activity metrics.
+            </p>
+
+            <div class="project-buttons">
+
+                <a href="https://github.com/Keerthana0927vk/App-User-Behavior-Segmentation"
+                   class="project-btn primary"
+                   target="_blank">
+                   GitHub
+                </a>
+                </a>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+        <section class="project-section">
+
+            <h2>01. Overview</h2>
+
+            <p>
+                This project focuses on understanding different types
+                of app users by analyzing their engagement and usage
+                behaviour.
+            </p>
+
+            <p>
+                Instead of predicting a predefined target, the project
+                uses unsupervised machine learning to discover natural
+                user groups within the dataset.
+            </p>
+
+        </section>
+
+
+        <!-- PROBLEM -->
+        <section class="project-section">
+
+            <h2>02. Problem Statement</h2>
+
+            <p>
+                App users do not interact with an application in the
+                same way. Some users may be highly engaged, while
+                others may have lower activity or different usage
+                patterns.
+            </p>
+
+            <p>
+                The objective of this project is to identify meaningful
+                user segments based on their behavioural characteristics
+                and use those segments to support targeted business
+                strategies.
+            </p>
+
+        </section>
+
+
+        <!-- FEATURES -->
+        <section class="project-section">
+
+            <h2>03. Behavioural Features</h2>
+
+            <p>
+                The clustering analysis uses the following behavioural
+                features:
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Sessions per Week</h3>
+                    <p>
+                        Measures how frequently users access the
+                        application during a week.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Average Session Duration</h3>
+                    <p>
+                        Represents the average amount of time spent
+                        during a session.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Daily Active Minutes</h3>
+                    <p>
+                        Measures the user's daily activity within
+                        the application.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Pages Viewed per Session</h3>
+                    <p>
+                        Represents the amount of content explored
+                        during a session.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Feature Clicks per Session</h3>
+                    <p>
+                        Measures interaction with application
+                        features.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Engagement Score</h3>
+                    <p>
+                        Represents the overall engagement level of
+                        the user.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PREPROCESSING -->
+        <section class="project-section">
+
+            <h2>04. Data Preparation</h2>
+
+            <p>
+                The behavioural features were prepared for clustering
+                so that the different measurements could be compared
+                appropriately during the machine learning process.
+            </p>
+
+            <div class="project-flow">
+
+                <div>Behavioural Data</div>
+
+                <span>→</span>
+
+                <div>Feature Selection</div>
+
+                <span>→</span>
+
+                <div>Feature Scaling</div>
+
+                <span>→</span>
+
+                <div>Clustering</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ELBOW -->
+        <section class="project-section">
+
+            <h2>05. Elbow Method</h2>
+
+            <p>
+                The Elbow Method was used to examine different numbers
+                of clusters by comparing the within-cluster variation.
+            </p>
+
+            <p>
+                The analysis was used to select a suitable number of
+                clusters for the user segmentation process.
+            </p>
+
+            <div class="project-image">
+                <img
+                   src="../assets/projects/user_segmentation/elbow_method.png"
+                   alt="Elbow Method for K-Means Clustering"
+                >
+            </div>
+        </section>
+
+
+        <!-- KMEANS -->
+        <section class="project-section">
+
+            <h2>06. K-Means Clustering</h2>
+
+            <p>
+                K-Means clustering was applied to group users with
+                similar behavioural characteristics.
+            </p>
+
+            <div class="cluster-flow">
+
+                <div class="cluster-step">
+                    <span>01</span>
+                    <strong>Initialize</strong>
+                    <p>
+                        Select cluster centroids.
+                    </p>
+                </div>
+
+                <div class="cluster-step">
+                    <span>02</span>
+                    <strong>Assign</strong>
+                    <p>
+                        Assign users to the nearest cluster.
+                    </p>
+                </div>
+
+                <div class="cluster-step">
+                    <span>03</span>
+                    <strong>Update</strong>
+                    <p>
+                        Recalculate cluster centroids.
+                    </p>
+                </div>
+
+                <div class="cluster-step">
+                    <span>04</span>
+                    <strong>Repeat</strong>
+                    <p>
+                        Continue until the clusters stabilize.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="k-value-box">
+
+                <span>Selected Clusters</span>
+
+                <strong>K = 4</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLUSTER PROFILES -->
+        <section class="project-section">
+
+            <h2>07. Cluster Profiles</h2>
+
+            <p>
+                The resulting clusters represent different patterns
+                of user behaviour.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card cluster-card">
+                    <span class="cluster-number">Cluster 0</span>
+
+                    <h3>Highly Engaged Users</h3>
+
+                    <p>
+                        This cluster shows the highest engagement
+                        score among the identified groups.
+                    </p>
+                </div>
+
+
+                <div class="feature-card cluster-card">
+                    <span class="cluster-number">Cluster 1</span>
+
+                    <h3>Lower Activity Users</h3>
+
+                    <p>
+                        This cluster has the lowest engagement score
+                        and lower daily active minutes.
+                    </p>
+                </div>
+
+
+                <div class="feature-card cluster-card">
+                    <span class="cluster-number">Cluster 2</span>
+
+                    <h3>Large User Segment</h3>
+
+                    <p>
+                        This is the largest user group and shows the
+                        highest pages viewed per session.
+                    </p>
+                </div>
+
+
+                <div class="feature-card cluster-card">
+                    <span class="cluster-number">Cluster 3</span>
+
+                    <h3>Long-Session Users</h3>
+
+                    <p>
+                        This is the smallest group and has the highest
+                        average session duration.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PCA -->
+        <section class="project-section">
+
+            <h2>08. PCA Visualization</h2>
+
+            <p>
+                Principal Component Analysis was used to reduce the
+                behavioural feature space to two dimensions for
+                visualizing the identified user clusters.
+            </p>
+
+            <div class="project-image">
+               <img
+                   src="../assets/projects/user_segmentation/pca_clusters.png"
+                   alt="PCA Visualization of User Clusters"
+               >
+            </div>
+
+        </section>
+
+
+        <!-- BUSINESS INSIGHTS -->
+        <section class="project-section">
+
+            <h2>09. Business Insights</h2>
+
+            <p>
+                The identified user segments can support different
+                engagement and retention strategies.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <h3>Cluster 0</h3>
+
+                    <p>
+                        Focus on loyalty initiatives, premium
+                        engagement and maintaining strong user
+                        interaction.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>Cluster 1</h3>
+
+                    <p>
+                        Use re-engagement and retention campaigns
+                        to encourage increased activity.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>Cluster 2</h3>
+
+                    <p>
+                        Promote feature discovery and personalized
+                        recommendations based on content exploration.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>Cluster 3</h3>
+
+                    <p>
+                        Focus on long-session engagement and
+                        feature optimization.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VISUAL ANALYSIS -->
+        <section class="project-section">
+
+            <h2>10. Cluster Analysis</h2>
+
+            <p>
+                The analysis compares cluster size and behavioural
+                characteristics to understand how the identified
+                groups differ.
+            </p>
+            <div class="project-image-grid">
+
+    <div class="project-image">
+        <img
+            src="../assets/projects/user_segmentation/cluster_count.png"
+            alt="Cluster Count"
+        >
+    </div>
+
+    <div class="project-image">
+        <img
+            src="../assets/projects/user_segmentation/cluster_comparison.png"
+            alt="Cluster-wise Feature Comparison"
+        >
+    </div>
+
+</div>
+            <div class="analysis-summary">
+
+                <div>
+                    <strong>4</strong>
+                    <span>User Clusters</span>
+                </div>
+
+                <div>
+                    <strong>K-Means</strong>
+                    <span>Clustering Algorithm</span>
+                </div>
+
+                <div>
+                    <strong>PCA</strong>
+                    <span>Visualization Method</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECHNOLOGIES -->
+        <section class="project-section">
+
+            <h2>11. Technologies</h2>
+
+            <div class="tech-tags">
+
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-learn</span>
+                <span>K-Means</span>
+                <span>StandardScaler</span>
+                <span>PCA</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- LINKS -->
+        <section class="project-section project-links-section">
+
+            <h2>12. Project Links</h2>
+
+            <p>
+                Explore the project source code and related
+                interactive work.
+            </p>
+
+            <div class="project-buttons">
+
+                <a href="https://github.com/Keerthana0927vk/App-User-Behavior-Segmentation"
+                   class="project-btn primary"
+                   target="_blank">
+                   GitHub
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- BACK -->
+        <section class="back-section">
+
+            <a href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Keerthana. Data Analyst | Data Science
+        </p>
+
+    </footer>
+
+</body>
+</html>

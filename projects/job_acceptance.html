@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Acceptance Prediction System | Keerthana</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                Keerthana
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- PROJECT HEADER -->
+    <main class="project-page">
+
+        <section class="project-hero">
+
+            <p class="project-label">HR ANALYTICS • MACHINE LEARNING</p>
+
+            <h1>
+                Job Acceptance<br>
+                Prediction System
+            </h1>
+
+            <p class="project-intro">
+                A machine learning project that analyzes candidate
+                characteristics and predicts job acceptance using
+                Logistic Regression.
+            </p>
+
+            <div class="project-buttons">
+                <a href="https://github.com/Keerthana0927vk/job-acceptance-prediction-system.git" class="project-btn primary" target="_blank">
+                    GitHub
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+        <section class="project-section">
+
+            <h2>01. Overview</h2>
+
+            <p>
+                The Job Acceptance Prediction System is an HR Analytics
+                project developed to analyze candidate placement-related
+                information and build a machine learning model for
+                predicting whether a candidate is placed or not placed.
+            </p>
+
+            <p>
+                The project combines data understanding, data cleaning,
+                exploratory data analysis, feature engineering,
+                MySQL storage, machine learning and an interactive
+                Streamlit dashboard.
+            </p>
+
+        </section>
+
+
+        <!-- PROBLEM STATEMENT -->
+        <section class="project-section">
+
+            <h2>02. Problem Statement</h2>
+
+            <p>
+                The objective of this project is to use candidate
+                academic, technical, experience and job-related
+                information to predict job placement status.
+            </p>
+
+            <div class="highlight-box">
+
+                <strong>Target Variable</strong>
+
+                <p>
+                    <code>status</code>
+                </p>
+
+                <ul>
+                    <li>Placed</li>
+                    <li>Not Placed</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATA UNDERSTANDING -->
+        <section class="project-section">
+
+            <h2>03. Data Understanding</h2>
+
+            <p>
+                The HR Job Placement dataset was explored to understand
+                its structure, variables, data types, missing values,
+                statistical characteristics and duplicate records.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Dataset Structure</h3>
+                    <p>
+                        Examined dataset shape and available columns.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Data Types</h3>
+                    <p>
+                        Identified numerical and categorical variables.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Missing Values</h3>
+                    <p>
+                        Checked missing values across the dataset.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Duplicates</h3>
+                    <p>
+                        Checked duplicate records before preprocessing.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATA CLEANING -->
+        <section class="project-section">
+
+            <h2>04. Data Cleaning</h2>
+
+            <p>
+                The dataset was prepared for analysis and machine
+                learning through a series of cleaning steps.
+            </p>
+
+            <ul class="project-list">
+
+                <li>Removed duplicate rows.</li>
+
+                <li>
+                    Removed extra spaces from categorical values.
+                </li>
+
+                <li>
+                    Standardized categorical values using lowercase
+                    formatting.
+                </li>
+
+                <li>
+                    Filled missing numerical values using the median.
+                </li>
+
+                <li>
+                    Filled missing categorical values using the mode.
+                </li>
+
+            </ul>
+
+            <p class="source-note">
+                These preprocessing steps are implemented in the
+                project's data cleaning script.
+            </p>
+
+        </section>
+
+
+        <!-- EDA -->
+        <section class="project-section">
+
+            <h2>05. Exploratory Data Analysis</h2>
+
+            <p>
+                Exploratory analysis was performed to understand the
+                relationship between candidate attributes and placement
+                status.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Placement Distribution</h3>
+                    <p>
+                        Examined the distribution of placed and
+                        not-placed candidates.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Skills Match</h3>
+                    <p>
+                        Analyzed skills match percentage against
+                        placement status.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Experience</h3>
+                    <p>
+                        Examined years of experience in relation
+                        to placement.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Technical Performance</h3>
+                    <p>
+                        Analyzed technical performance and placement
+                        patterns.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Company Tier</h3>
+                    <p>
+                        Explored placement patterns across company
+                        tiers.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Competition Level</h3>
+                    <p>
+                        Examined competition level in relation to
+                        placement outcomes.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURE ENGINEERING -->
+        <section class="project-section">
+
+            <h2>06. Feature Engineering</h2>
+
+            <p>
+                Additional categorical features were created from
+                existing candidate attributes to make the data more
+                suitable for analysis and modelling.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Experience Category</h3>
+                    <p>
+                        Fresher, Junior and Senior based on years
+                        of experience.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Academic Band</h3>
+                    <p>
+                        Average, Good and Excellent based on degree
+                        percentage.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Skills Match Level</h3>
+                    <p>
+                        Low, Medium and High based on skills match
+                        percentage.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Interview Performance</h3>
+                    <p>
+                        Poor, Average and Strong based on technical
+                        score.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MYSQL -->
+        <section class="project-section">
+
+            <h2>07. MySQL Database</h2>
+
+            <p>
+                The feature-engineered dataset was stored in MySQL
+                for structured data storage and database-level
+                analysis.
+            </p>
+
+            <div class="tech-box">
+
+                <div>
+                    <span>Database</span>
+                    <strong>job_acceptance_db</strong>
+                </div>
+
+                <div>
+                    <span>Table</span>
+                    <strong>candidate_placement_data</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MACHINE LEARNING -->
+        <section class="project-section">
+
+            <h2>08. Machine Learning</h2>
+
+            <p>
+                A Logistic Regression model was trained to predict
+                the candidate's placement status.
+            </p>
+
+            <div class="project-flow">
+
+                <div>Feature Data</div>
+                <span>→</span>
+
+                <div>Label Encoding</div>
+                <span>→</span>
+
+                <div>Train / Test Split</div>
+                <span>→</span>
+
+                <div>Standard Scaling</div>
+                <span>→</span>
+
+                <div>Logistic Regression</div>
+
+            </div>
+
+            <ul class="project-list">
+
+                <li>
+                    Categorical variables were encoded using
+                    Label Encoding.
+                </li>
+
+                <li>
+                    Data was divided into training and testing sets.
+                </li>
+
+                <li>
+                    Numerical features were standardized using
+                    StandardScaler.
+                </li>
+
+                <li>
+                    Logistic Regression was used for classification.
+                </li>
+
+                <li>
+                    The trained model, encoders and scaler were
+                    saved using Joblib.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- MODEL EVALUATION -->
+        <section class="project-section">
+
+            <h2>09. Model Evaluation</h2>
+
+            <p>
+                The model was evaluated using classification metrics
+                generated from the test dataset.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Accuracy</h3>
+                    <p>
+                        Measures the overall proportion of correct
+                        predictions.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Confusion Matrix</h3>
+                    <p>
+                        Used to examine correct and incorrect
+                        classification results.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Classification Report</h3>
+                    <p>
+                        Provides classification performance metrics
+                        for the prediction classes.
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="source-note">
+                Exact evaluation values will be added after verifying
+                the final model run output.
+            </p>
+
+        </section>
+
+
+        <!-- STREAMLIT -->
+        <section class="project-section">
+
+            <h2>10. Streamlit Dashboard</h2>
+
+            <p>
+                An interactive Streamlit dashboard was developed to
+                explore the candidate dataset and perform individual
+                job acceptance predictions.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Candidate Analytics</h3>
+                    <p>
+                        Displays total candidates, placement rate,
+                        average interview score and average skills
+                        match percentage.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Interactive Prediction</h3>
+                    <p>
+                        Users can enter candidate details and generate
+                        a job acceptance prediction.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Acceptance Probability</h3>
+                    <p>
+                        The application displays the predicted
+                        acceptance probability.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Risk Level</h3>
+                    <p>
+                        The dashboard displays a corresponding
+                        risk level for the prediction.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+        <div class="dashboard-gallery">
+
+    <div class="dashboard-image">
+        <img
+            src="../assets/projects/job_acceptance/job_acceptance_1.png"
+            alt="Job Acceptance Prediction Streamlit Dashboard"
+        >
+    </div>
+
+    <div class="dashboard-image">
+        <img
+            src="../assets/projects/job_acceptance/job_acceptance_2.png"
+            alt="Job Acceptance Candidate Analytics"
+        >
+    </div>
+
+    <div class="dashboard-image">
+        <img
+            src="../assets/projects/job_acceptance/job_acceptance_3.png"
+            alt="Job Acceptance Prediction Result"
+        >
+    </div>
+
+    <div class="dashboard-image">
+        <img
+            src="../assets/projects/job_acceptance/job_acceptance_4.png"
+            alt="Job Acceptance Risk Level Dashboard"
+        >
+    </div>
+
+</div>
+
+        <!-- KEY INSIGHTS -->
+        <section class="project-section">
+
+            <h2>11. Key Insights</h2>
+
+            <p>
+                The project provides an analytical framework for
+                understanding how candidate characteristics,
+                skills, academic performance, experience and
+                interview-related factors relate to placement
+                outcomes.
+            </p>
+
+            <ul class="project-list">
+
+                <li>
+                    Candidate attributes can be analyzed together
+                    to understand placement patterns.
+                </li>
+
+                <li>
+                    Feature engineering converts raw candidate
+                    attributes into meaningful analytical categories.
+                </li>
+
+                <li>
+                    Machine learning can be used to classify candidate
+                    placement status.
+                </li>
+
+                <li>
+                    The Streamlit application makes the prediction
+                    workflow interactive and user-friendly.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- TECHNOLOGIES -->
+        <section class="project-section">
+
+            <h2>12. Technologies</h2>
+
+            <div class="tech-tags">
+
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-learn</span>
+                <span>Logistic Regression</span>
+                <span>MySQL</span>
+                <span>SQLAlchemy</span>
+                <span>Streamlit</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
+                <span>Joblib</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT LINKS -->
+        <section class="project-section project-links-section">
+
+            <h2>13. Project Links</h2>
+
+            <p>
+                Explore the source code and interactive application.
+            </p>
+
+            <div class="project-buttons">
+
+                <a href="https://github.com/Keerthana0927vk/job-acceptance-prediction-system"
+                   class="project-btn primary"
+                   target="_blank">
+                    View on GitHub
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- BACK -->
+        <section class="back-section">
+
+            <a href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            © 2026 Keerthana. Data Analyst | Data Science
+        </p>
+
+    </footer>
+
+</body>
+</html>

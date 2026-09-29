@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Global Seismic Trends - Data Analytics Project by Keerthana">
+
+    <title>Global Seismic Trends | Keerthana</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+                KEERTHANA
+            </a>
+
+            <nav>
+
+                <a href="../index.html">Home</a>
+
+                <a href="../index.html#about">
+                    About
+                </a>
+
+                <a href="../index.html#skills">
+                    Skills
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <!-- =========================
+             PROJECT HERO
+        ========================== -->
+
+        <section class="project-hero">
+
+            <div class="container">
+
+                <p class="section-label">
+                    DATA ANALYTICS · SQL
+                </p>
+
+                <h1>
+                    Global Seismic Trends
+                </h1>
+
+                <p class="project-intro">
+
+                    An end-to-end earthquake data analysis project
+                    using USGS earthquake data, Python and MySQL
+                    to explore seismic patterns, magnitude, depth,
+                    geographical distribution and temporal trends.
+
+                </p>
+
+
+                <div class="project-tech-large">
+
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>Requests</span>
+                    <span>SQL</span>
+                    <span>MySQL</span>
+                    <span>SQLAlchemy</span>
+
+                </div>
+                <div class="hero-buttons">
+
+                     <a href="https://github.com/Keerthana0927vk/Global_seismic_trends"
+                        class="btn primary-btn"
+                        target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             01 OVERVIEW
+        ========================== -->
+
+        <section class="project-section">
+
+            <div class="container project-layout">
+
+                <div>
+
+                    <p class="section-label">
+                        01 · OVERVIEW
+                    </p>
+
+                    <h2>
+                        From earthquake data
+                        to structured insights.
+                    </h2>
+
+                </div>
+
+
+                <div class="project-text">
+
+                    <p>
+
+                        Global Seismic Trends is an end-to-end
+                        data analytics project built around
+                        earthquake event data collected from
+                        the USGS Earthquake API.
+
+                    </p>
+
+                    <p>
+
+                        The project covers the complete workflow
+                        from data collection and preprocessing
+                        to feature engineering, MySQL storage
+                        and SQL-based analysis.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             02 PROBLEM STATEMENT
+        ========================== -->
+
+        <section class="project-section light-section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    02 · PROBLEM STATEMENT
+                </p>
+
+                <h2>
+                    What can earthquake data tell us?
+                </h2>
+
+                <p class="section-description">
+
+                    The objective of this project is to analyze
+                    earthquake events and identify patterns related
+                    to magnitude, depth, location, time, tsunami
+                    activity and other earthquake characteristics.
+
+                </p>
+
+
+                <div class="problem-grid">
+
+                    <div class="feature-box">
+
+                        <h3>
+                            Magnitude
+                        </h3>
+
+                        <p>
+                            Identify and compare high-magnitude
+                            earthquake events.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-box">
+
+                        <h3>
+                            Depth
+                        </h3>
+
+                        <p>
+                            Analyze shallow, intermediate and
+                            deep earthquake events.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-box">
+
+                        <h3>
+                            Geography
+                        </h3>
+
+                        <p>
+                            Explore earthquake distribution
+                            across countries and regions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-box">
+
+                        <h3>
+                            Time
+                        </h3>
+
+                        <p>
+                            Analyze earthquake frequency across
+                            years, months and days.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             03 DATA COLLECTION
+        ========================== -->
+
+        <section class="project-section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    03 · DATA COLLECTION
+                </p>
+
+                <h2>
+                    USGS Earthquake API
+                </h2>
+
+                <p class="section-description">
+
+                    Earthquake records were collected programmatically
+                    from the USGS Earthquake API. The collection
+                    process was performed month-by-month from 2021
+                    through 2025.
+
+                </p>
+
+
+                <div class="stats-grid">
+
+                    <div class="stat-box">
+
+                        <strong>
+                            2021–2025
+                        </strong>
+
+                        <span>
+                            Data period
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-box">
+
+                        <strong>
+                            2.5+
+                        </strong>
+
+                        <span>
+                            Minimum magnitude
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-box">
+
+                        <strong>
+                            GeoJSON
+                        </strong>
+
+                        <span>
+                            API response format
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-box">
+
+                        <strong>
+                            Monthly
+                        </strong>
+
+                        <span>
+                            Collection process
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="code-flow">
+
+                    <span>USGS API</span>
+
+                    <span>→</span>
+
+                    <span>Python Requests</span>
+
+                    <span>→</span>
+
+                    <span>Raw CSV</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             04 DATA CLEANING
+        ========================== -->
+
+        <section class="project-section light-section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    04 · DATA CLEANING
+                </p>
+
+                <h2>
+                    Preparing the raw dataset
+                </h2>
+
+                <p class="section-description">
+
+                    The raw earthquake dataset was processed
+                    using Python and Pandas before analytical
+                    processing.
+
+                </p>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-box">
+
+                        <h3>
+                            Datetime Processing
+                        </h3>
+
+                        <p>
+                            Converted time and updated fields
+                            into datetime format.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-box">
+
+                        <h3>
+                            Missing Values
+                        </h3>
+
+                        <p>
+                            Checked missing values and handled
+                            selected fields such as alert and
+                            timezone information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-box">
+
+                        <h3>
+                            Location Processing
+                        </h3>
+
+                        <p>
+                            Extracted country information from
+                            earthquake place descriptions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-box">
+
+                        <h3>
+                            Validation
+                        </h3>
+
+                        <p>
+                            Checked the final columns and dataset
+                            shape before saving the processed data.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             05 FEATURE ENGINEERING
+        ========================== -->
+
+        <section class="project-section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    05 · FEATURE ENGINEERING
+                </p>
+
+                <h2>
+                    Creating analytical features
+                </h2>
+
+                <p class="section-description">
+
+                    Additional features were created to make the
+                    earthquake data easier to analyze.
+
+                </p>
+
+
+                <div class="feature-table">
+
+                    <div class="feature-row feature-header">
+
+                        <span>
+                            Feature
+                        </span>
+
+                        <span>
+                            Purpose
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature-row">
+
+                        <span>
+                            Year
+                        </span>
+
+                        <span>
+                            Year-wise earthquake analysis
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature-row">
+
+                        <span>
+                            Month
+                        </span>
+
+                        <span>
+                            Monthly trend analysis
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature-row">
+
+                        <span>
+                            Day / Hour
+                        </span>
+
+                        <span>
+                            Time-based analysis
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature-row">
+
+                        <span>
+                            Day of Week
+                        </span>
+
+                        <span>
+                            Weekly pattern analysis
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature-row">
+
+                        <span>
+                            Country
+                        </span>
+
+                        <span>
+                            Geographical analysis
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature-row">
+
+                        <span>
+                            Depth Category
+                        </span>
+
+                        <span>
+                            Shallow / Intermediate / Deep
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature-row">
+
+                        <span>
+                            Strong Quake Flag
+                        </span>
+
+                        <span>
+                            Identifies magnitude ≥ 6.0
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature-row">
+
+                        <span>
+                            Tsunami Flag
+                        </span>
+
+                        <span>
+                            Readable tsunami indicator
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             06 MYSQL
+        ========================== -->
+
+        <section class="project-section light-section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    06 · MYSQL
+                </p>
+
+                <h2>
+                    Structured data storage
+                </h2>
+
+                <p class="section-description">
+
+                    The cleaned dataset was loaded into MySQL
+                    for structured querying and analytical
+                    processing.
+
+                </p>
+
+
+                <div class="database-flow">
+
+                    <div>
+                        <strong>
+                            Cleaned CSV
+                        </strong>
+
+                        <span>
+                            Processed dataset
+                        </span>
+                    </div>
+
+
+                    <span class="flow-arrow">
+                        →
+                    </span>
+
+
+                    <div>
+                        <strong>
+                            MySQL
+                        </strong>
+
+                        <span>
+                            global_seismic_trends
+                        </span>
+                    </div>
+
+
+                    <span class="flow-arrow">
+                        →
+                    </span>
+
+
+                    <div>
+                        <strong>
+                            earthquakes
+                        </strong>
+
+                        <span>
+                            Analysis table
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             07 SQL ANALYSIS
+        ========================== -->
+
+        <section class="project-section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    07 · SQL ANALYSIS
+                </p>
+
+                <h2>
+                    30 SQL analyses
+                </h2>
+
+                <p class="section-description">
+
+                    SQL was used to explore earthquake magnitude,
+                    depth, geography, temporal patterns, tsunami
+                    activity and data-quality indicators.
+
+                </p>
+
+
+                <div class="analysis-grid">
+
+                    <div class="analysis-group">
+
+                        <h3>
+                            Earthquake Characteristics
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Top 10 strongest earthquakes
+                            </li>
+
+                            <li>
+                                Top 10 deepest earthquakes
+                            </li>
+
+                            <li>
+                                High magnitude shallow earthquakes
+                            </li>
+
+                            <li>
+                                Average magnitude by magType
+                            </li>
+
+                            <li>
+                                Average magnitude by depth category
+                            </li>
+
+                            <li>
+                                Deep earthquakes above 300 km
+                            </li>
+
+                            <li>
+                                Strong earthquake percentage
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="analysis-group">
+
+                        <h3>
+                            Geographic Analysis
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Average depth by country
+                            </li>
+
+                            <li>
+                                Top countries by average magnitude
+                            </li>
+
+                            <li>
+                                Top countries by frequency and magnitude
+                            </li>
+
+                            <li>
+                                Equatorial region analysis
+                            </li>
+
+                            <li>
+                                Shallow vs deep ratio by country
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="analysis-group">
+
+                        <h3>
+                            Temporal Analysis
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Earthquakes per year
+                            </li>
+
+                            <li>
+                                Earthquakes per month
+                            </li>
+
+                            <li>
+                                Earthquakes by day of week
+                            </li>
+
+                            <li>
+                                Year-over-year growth
+                            </li>
+
+                            <li>
+                                Close-time earthquakes
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="analysis-group">
+
+                        <h3>
+                            Tsunami & Alerts
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Tsunami events per year
+                            </li>
+
+                            <li>
+                                Alert levels
+                            </li>
+
+                            <li>
+                                Tsunami vs average magnitude
+                            </li>
+
+                            <li>
+                                Status distribution
+                            </li>
+
+                            <li>
+                                Earthquake type distribution
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="analysis-group">
+
+                        <h3>
+                            Data Quality & Networks
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Top earthquake networks
+                            </li>
+
+                            <li>
+                                Data quality indicators
+                            </li>
+
+                            <li>
+                                Average RMS and GAP by country
+                            </li>
+
+                            <li>
+                                High station-count events
+                            </li>
+
+                            <li>
+                                Poor quality signals
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="analysis-group">
+
+                        <h3>
+                            Comparative Analysis
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Countries with shallow and deep
+                                earthquakes in the same month
+                            </li>
+
+                            <li>
+                                Magnitude by depth category
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             08 KEY INSIGHTS
+        ========================== -->
+
+        <section class="project-section light-section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    08 · KEY INSIGHTS
+                </p>
+
+                <h2>
+                    What the analysis explores
+                </h2>
+
+                <div class="insights-grid">
+
+                    <div class="insight-box">
+
+                        <span>01</span>
+
+                        <h3>
+                            Magnitude Patterns
+                        </h3>
+
+                        <p>
+                            Identified and compared the strongest
+                            earthquake events and examined
+                            magnitude across different categories.
+                        </p>
+
+                    </div>
+
+
+                    <div class="insight-box">
+
+                        <span>02</span>
+
+                        <h3>
+                            Depth Patterns
+                        </h3>
+
+                        <p>
+                            Compared shallow, intermediate and
+                            deep earthquake activity across
+                            geographical areas.
+                        </p>
+
+                    </div>
+
+
+                    <div class="insight-box">
+
+                        <span>03</span>
+
+                        <h3>
+                            Temporal Trends
+                        </h3>
+
+                        <p>
+                            Examined earthquake frequency by
+                            year, month, day of week and
+                            year-over-year change.
+                        </p>
+
+                    </div>
+
+
+                    <div class="insight-box">
+
+                        <span>04</span>
+
+                        <h3>
+                            Tsunami & Alerts
+                        </h3>
+
+                        <p>
+                            Analyzed tsunami-associated events
+                            and alert-level distributions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="insight-box">
+
+                        <span>05</span>
+
+                        <h3>
+                            Geographic Patterns
+                        </h3>
+
+                        <p>
+                            Compared earthquake frequency,
+                            average depth and magnitude
+                            across countries.
+                        </p>
+
+                    </div>
+
+
+                    <div class="insight-box">
+
+                        <span>06</span>
+
+                        <h3>
+                            Data Quality
+                        </h3>
+
+                        <p>
+                            Examined RMS, GAP, station counts
+                            and other signals related to
+                            earthquake data quality.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="insight-note">
+
+                    The project contains the SQL queries required
+                    to generate the underlying results. Exact
+                    numerical findings can be added here once
+                    the final query outputs are available.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+     10 STREAMLIT DASHBOARD
+========================= -->
+
+<section class="project-section">
+
+    <div class="container">
+
+        <p class="section-label">
+            10 · STREAMLIT DASHBOARD
+        </p>
+
+        <h2>
+            Interactive Earthquake Dashboard
+        </h2>
+
+        <p class="section-description">
+            A Streamlit dashboard was developed to explore earthquake
+            data interactively using filters, SQL analysis and
+            visualizations.
+        </p>
+
+        <div class="dashboard-gallery">
+
+            <div class="dashboard-image">
+                <img
+                    src="../assets/projects/seismic/seismic_1.png"
+                    alt="Global Seismic Trends Streamlit Dashboard"
+                >
+            </div>
+
+            <div class="dashboard-image">
+                <img
+                    src="../assets/projects/seismic/seismic_2.png"
+                    alt="Global Seismic Trends SQL Analysis"
+                >
+            </div>
+
+            <div class="dashboard-image">
+                <img
+                    src="../assets/projects/seismic/seismic_3.png"
+                    alt="Global Seismic Trends Dashboard Visualization"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- =========================
+             10 TECHNOLOGIES
+        ========================== -->
+
+        <section class="project-section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    10 · TECHNOLOGIES
+                </p>
+
+                <h2>
+                    Tools used
+                </h2>
+
+
+                <div class="technology-grid">
+
+                    <div>
+                        <strong>
+                            Python
+                        </strong>
+
+                        <span>
+                            Data collection & processing
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            Pandas
+                        </strong>
+
+                        <span>
+                            Data manipulation
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            Requests
+                        </strong>
+
+                        <span>
+                            API data collection
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            MySQL
+                        </strong>
+
+                        <span>
+                            Data storage & querying
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            SQL
+                        </strong>
+
+                        <span>
+                            Analytical queries
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            SQLAlchemy
+                        </strong>
+
+                        <span>
+                            Python–MySQL connection
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             11 PROJECT LINKS
+        ========================== -->
+
+        <section class="project-links">
+
+            <div class="container">
+
+                <p class="section-label">
+                    11 · PROJECT
+                </p>
+
+                <h2>
+                    Explore the project
+                </h2>
+
+                <p class="project-link-description">
+
+                    Source code and project documentation
+                    can be added here.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    
+                    <a href="https://github.com/Keerthana0927vk/Global_seismic_trends"
+                       class="btn primary-btn"
+                       target="_blank">
+                        GitHub
+
+                    </a>
+
+
+                    <a href="../index.html#projects"
+                       class="btn secondary-btn">
+
+                        ← Back to Projects
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Keerthana. All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Food Delivery Analysis | Keerthana</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                Keerthana
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <main class="project-page">
+
+        <!-- HERO -->
+        <section class="project-hero">
+
+            <p class="project-label">
+                DATA ANALYSIS • BUSINESS INTELLIGENCE
+            </p>
+
+            <h1>
+                Online Food<br>
+                Delivery Analysis
+            </h1>
+
+            <p class="project-intro">
+                An end-to-end food delivery analytics project that
+                combines Python, SQL and Power BI to understand
+                orders, revenue, delivery performance, cancellations
+                and operational patterns.
+            </p>
+
+            <div class="project-buttons">
+
+                <a href="https://github.com/Keerthana0927vk/online-food-delivery-analysis"
+                   class="project-btn primary"
+                   target="_blank">
+                   GitHub
+                </a>
+
+                <a href="#dashboard" class="project-btn secondary">
+                    Dashboard
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+        <section class="project-section">
+
+            <h2>01. Overview</h2>
+
+            <p>
+                This project analyzes an online food delivery dataset
+                to understand customer orders, restaurant activity,
+                delivery performance, cancellations and profitability.
+            </p>
+
+            <p>
+                The project follows an end-to-end analytics workflow
+                starting from data loading and cleaning, followed by
+                exploratory analysis, SQL analysis and Power BI
+                dashboard development.
+            </p>
+
+            <div class="highlight-box">
+
+                <strong>Project Focus</strong>
+
+                <p>
+                    Transform raw food delivery data into meaningful
+                    business insights using Python, MySQL and Power BI.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATASET -->
+        <section class="project-section">
+
+            <h2>02. Dataset Understanding</h2>
+
+            <p>
+                The raw dataset contains 100,000 records and 25 columns
+                covering customer, restaurant, order, delivery,
+                payment and profitability information.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>100,000</h3>
+                    <p>Initial records</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>25</h3>
+                    <p>Dataset columns</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>98,986</h3>
+                    <p>Records after date cleaning</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>2024</h3>
+                    <p>Order data year</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATA CATEGORIES -->
+        <section class="project-section">
+
+            <h2>03. Data Categories</h2>
+
+            <p>
+                The dataset contains information across multiple
+                business areas.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Customer</h3>
+                    <p>
+                        Customer age, gender and customer identifiers.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Restaurant</h3>
+                    <p>
+                        Restaurant, cuisine type, city and area.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Order</h3>
+                    <p>
+                        Order value, final amount, discounts and status.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Delivery</h3>
+                    <p>
+                        Delivery time, distance, ratings and delivery
+                        partner information.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Payment</h3>
+                    <p>
+                        Payment mode and transaction-related information.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Profitability</h3>
+                    <p>
+                        Profit margin associated with each order.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATA CLEANING -->
+        <section class="project-section">
+
+            <h2>04. Data Cleaning</h2>
+
+            <p>
+                Missing values were handled according to the type and
+                business meaning of each column.
+            </p>
+
+            <div class="project-flow">
+
+                <div>Raw Dataset</div>
+
+                <span>→</span>
+
+                <div>Missing Value Analysis</div>
+
+                <span>→</span>
+
+                <div>Data Cleaning</div>
+
+                <span>→</span>
+
+                <div>Validation</div>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Numerical Values</h3>
+                    <p>
+                        Median-based filling was used for numerical
+                        fields such as customer age, order value,
+                        delivery time and distance where applicable.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Categorical Values</h3>
+                    <p>
+                        Missing categorical values were represented
+                        using meaningful labels such as Unknown or
+                        No Rating.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Final Amount</h3>
+                    <p>
+                        Missing final amounts for applicable delivered
+                        orders were recalculated using order value and
+                        discount information.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Date Cleaning</h3>
+                    <p>
+                        Order dates were converted to datetime format
+                        and records with invalid or missing dates were
+                        removed.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EDA -->
+        <section class="project-section">
+
+            <h2>05. Exploratory Data Analysis</h2>
+
+            <p>
+                Exploratory analysis was performed to understand order
+                behaviour, revenue, delivery performance and
+                cancellations.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Order Analysis</h3>
+                    <p>
+                        Examined delivered and cancelled orders to
+                        understand overall order behaviour.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Revenue Analysis</h3>
+                    <p>
+                        Analysed total revenue and average order value
+                        using the final order amount.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Delivery Analysis</h3>
+                    <p>
+                        Analysed delivery time, delivery distance and
+                        delivery performance across cities.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Cancellation Analysis</h3>
+                    <p>
+                        Compared cancellation rates across cities and
+                        examined major cancellation reasons.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- KEY EDA FINDINGS -->
+        <section class="project-section">
+
+            <h2>06. Key Analytical Findings</h2>
+
+            <div class="insight-grid">
+
+                <div class="insight-card">
+                    <span class="insight-number">01</span>
+
+                    <h3>Order Distribution</h3>
+
+                    <p>
+                        The cleaned dataset contains 98,986 orders,
+                        with delivered and cancelled orders analysed
+                        separately.
+                    </p>
+                </div>
+
+
+                <div class="insight-card">
+                    <span class="insight-number">02</span>
+
+                    <h3>Delivery Performance</h3>
+
+                    <p>
+                        Average delivery time was approximately
+                        127.48 minutes in the EDA dataset.
+                    </p>
+                </div>
+
+
+                <div class="insight-card">
+                    <span class="insight-number">03</span>
+
+                    <h3>Cancellation Pattern</h3>
+
+                    <p>
+                        City-level cancellation rates were all around
+                        15%, with only small differences between cities.
+                    </p>
+                </div>
+
+
+                <div class="insight-card">
+                    <span class="insight-number">04</span>
+
+                    <h3>Cancellation Reasons</h3>
+
+                    <p>
+                        Late delivery, customer cancellation and
+                        restaurant issues were the recorded
+                        cancellation categories.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SQL -->
+        <section class="project-section">
+
+            <h2>07. SQL Analysis</h2>
+
+            <p>
+                MySQL was used to store and analyse the cleaned
+                food delivery data for structured business analysis.
+            </p>
+
+            <div class="project-flow">
+
+                <div>Cleaned Data</div>
+
+                <span>→</span>
+
+                <div>MySQL Database</div>
+
+                <span>→</span>
+
+                <div>SQL Queries</div>
+
+                <span>→</span>
+
+                <div>Business Insights</div>
+
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Order Analysis</h3>
+                    <p>
+                        Analysed order counts and order status.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Revenue Analysis</h3>
+                    <p>
+                        Used order and final amount fields for
+                        revenue-related analysis.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>City Analysis</h3>
+                    <p>
+                        Compared order and cancellation behaviour
+                        across cities.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Delivery Analysis</h3>
+                    <p>
+                        Analysed delivery time, distance and
+                        cancellation-related patterns.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- POWER BI -->
+        <section class="project-section dashboard-section" id="dashboard">
+
+            <h2>08. Power BI Dashboard</h2>
+
+            <p>
+                The final analysis was transformed into an interactive
+                Power BI dashboard to present business KPIs and
+                operational insights visually.
+            </p>
+
+
+            <div class="dashboard-heading">
+
+                <span>Dashboard 01</span>
+
+                <h3>Executive Overview</h3>
+
+                <p>
+                    Provides an overview of orders, revenue, average
+                    order value, cancellation rate, order trends,
+                    cuisine performance and city-wise order volume.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-image">
+
+                <img
+                    src="../assets/projects/food_delivery/powerbi_overview.png"
+                    alt="Online Food Delivery Power BI Executive Overview Dashboard"
+                >
+
+            </div>
+
+
+            <div class="dashboard-heading">
+
+                <span>Dashboard 02</span>
+
+                <h3>Delivery & Operations Analysis</h3>
+
+                <p>
+                    Focuses on delivery time, delivery distance,
+                    cuisine-wise delivery performance and
+                    city-wise cancellation rates.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-image">
+
+                <img
+                    src="../assets/projects/food_delivery/powerbi_delivery.png"
+                    alt="Online Food Delivery Power BI Delivery and Operations Dashboard"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- BUSINESS INSIGHTS -->
+        <section class="project-section">
+
+            <h2>09. Business Insights</h2>
+
+            <p>
+                The analysis provides several areas that can support
+                operational and business decision-making.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Order Monitoring</h3>
+
+                    <p>
+                        Track order volume and order trends across
+                        different cities and cuisine categories.
+                    </p>
+                </div>
+
+
+                <div class="feature-card">
+                    <h3>Delivery Operations</h3>
+
+                    <p>
+                        Monitor delivery time and distance to understand
+                        delivery performance.
+                    </p>
+                </div>
+
+
+                <div class="feature-card">
+                    <h3>Cancellation Reduction</h3>
+
+                    <p>
+                        Cancellation reasons can help identify areas
+                        such as delayed delivery and restaurant-related
+                        issues that require attention.
+                    </p>
+                </div>
+
+
+                <div class="feature-card">
+                    <h3>Profitability</h3>
+
+                    <p>
+                        Profit margin analysis can be used alongside
+                        order and delivery metrics to understand
+                        operational performance.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- END TO END -->
+        <section class="project-section">
+
+            <h2>10. End-to-End Workflow</h2>
+
+            <div class="project-flow workflow-large">
+
+                <div>
+                    <strong>Python</strong>
+                    <span>Cleaning & EDA</span>
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    <strong>MySQL</strong>
+                    <span>SQL Analysis</span>
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    <strong>Power BI</strong>
+                    <span>Dashboard</span>
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    <strong>Insights</strong>
+                    <span>Business Understanding</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECHNOLOGIES -->
+        <section class="project-section">
+
+            <h2>11. Technologies</h2>
+
+            <div class="tech-tags">
+
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
+                <span>MySQL</span>
+                <span>SQL</span>
+                <span>Power BI</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- LINKS -->
+        <section class="project-section project-links-section">
+
+            <h2>12. Project Links</h2>
+
+            <p>
+                Explore the project source code and interactive
+                dashboard.
+            </p>
+
+            <div class="project-buttons">
+
+                <a href="<a href="https://github.com/Keerthana0927vk/online-food-delivery-analysis"
+                   class="project-btn primary"
+                   target="_blank">
+                   GitHub
+                </a>" 
+                class="project-btn primary">
+                    View on GitHub
+                </a>
+
+                <a href="#dashboard" class="project-btn secondary">
+                    View Dashboard
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- BACK -->
+        <section class="back-section">
+
+            <a href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Keerthana. Data Analyst | Data Science
+        </p>
+
+    </footer>
+
+</body>
+</html>
